@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Dependencies used
+## npm i angular-notifier
+## npm install web-animations-js
+## npm install @angular/http@latest
+
+screenshots
+1. shows the list of user
+    image url: https://gifyu.com/image/qJnS
+
+2. shows the load more section, to get the next result
+    image url:https://gifyu.com/image/qJle
+
+3. shows the search result, onkeyup search function is called, it will search after 1 second on every keyup, to reduce the loads of api calls,
+    image url:https://gifyu.com/image/qJlX
+
+
+4. shows the user Repository list and basic details.
+    image url:https://gifyu.com/image/qJn2
+
+
+
+
+# brij_test
+# brij_test
+# brij_test
