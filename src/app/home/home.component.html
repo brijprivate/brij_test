@@ -1,0 +1,70 @@
+<!-- loader -->
+<div id="cover-spin" *ngIf="loader"></div>
+<!-- loader end -->
+
+<!-- top bar section having search and get all button -->
+<div class="topbar text-center">
+    <div class="row">
+        <div class="col-md-6"><button class="btn" (click)="getalllist(0)">Get all user list</button>
+        </div>
+        <div class="col-md-6">
+            <input type="text" (keyup)="searchuser()" placeholder="type search user" class="inputsearch" [(ngModel)]="search"
+                name="" id="">
+        </div>
+
+    </div>
+</div>
+<!-- top bar section having search and get all button end -->
+
+<!-- user list -->
+<div class="container list">
+    <ul class="img">
+        <li *ngFor="let user of userlist" (click)="select(user)">
+            <img [src]="user.avatar_url" />
+            <h3>{{user.login  | titlecase}}</h3>
+            <p><strong>Id : </strong>{{user.id}}</p>
+            <p><strong>Link : </strong><a [href]='user.html_url' target="_blank">{{user.html_url}}</a> </p>
+
+        </li>
+        <div class="text-center">
+            <button class="btn" *ngIf="!searchmode" (click)="loadmore(currentuserid)">Load More</button>
+
+        </div>
+    </ul>
+</div>
+<!-- user list ended -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center"> {{selecreduser.login  | titlecase}}'s Repository List</h4>
+            </div>
+            <div class="modal-body modeldesign">
+                <div class="modelimage">
+                    <img [src]='selecreduser.avatar_url' alt="userimage">
+                </div>
+                <div>
+                    <ol>
+                        <li *ngFor="let repo of selecteduserrepo;let i = index"><span>{{i+1}}</span>
+                            <p><strong>Repo Name : </strong> {{repo.full_name}}</p>
+                            <p><strong>Git Url : </strong><a [href]='repo.git_url' target="_blank">{{repo.git_url}}</a> </p>
+                            <p><strong>Ssh Url : </strong><a [href]='repo.ssh_url' target="_blank">{{repo.ssh_url}}</a> </p>
+
+                        </li>
+                       
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- modal ended -->

@@ -1,0 +1,146 @@
+
+  .btn{
+    background: #fff;
+    border: 1px solid #656565;
+    margin: 0.5em;
+  }
+
+
+  .topbar{
+    padding: 2em 0;
+    background: lightblue;
+    margin: 0 0 2em 0;
+  }
+
+  .inputsearch{
+    margin: 0.5em;
+  }
+
+.text-center{
+text-align: center;
+}
+  
+//  css for loader
+
+  #cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+
+ 
+// css for list showing
+.list{
+
+
+ul {
+  list-style-type: none;
+  
+  width: 80%;
+  margin: 0 auto;
+}
+ 
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  margin:0;
+}
+ 
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+ 
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  margin: 3px 0;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+ 
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.img{
+    img{
+      width: 75px;
+      height: auto;
+      max-width: 100px;
+      border-radius: 50%;
+    }
+}
+
+}
+// css for model design
+.modeldesign{
+    .modelimage{
+        text-align: center;
+        img{
+            width: 15vh;
+            margin: 1em;
+        }
+    }
+    ol {
+        color: #ccc;
+        list-style-type: none;
+      }
+       
+      ol li {
+        position: relative;
+        font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+        margin-bottom: 20px;
+      }
+       
+      li p {
+        font: 12px/1.5 Helvetica, sans-serif;
+        padding-left: 70px;
+        color: #555;
+      }
+       
+      span {
+        position: absolute;
+      }
+}
